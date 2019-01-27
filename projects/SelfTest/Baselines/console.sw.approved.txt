@@ -3179,7 +3179,7 @@ with expansion:
 
 -------------------------------------------------------------------------------
 Generators internals
-  Explicitly type generator sequence
+  Explicitly typed generator sequence
 -------------------------------------------------------------------------------
 GeneratorsImpl.tests.cpp:<line number>
 ...............................................................................

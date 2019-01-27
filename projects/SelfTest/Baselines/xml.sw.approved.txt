@@ -3893,7 +3893,7 @@
         </Expression>
         <OverallResults successes="10" failures="0" expectedFailures="0"/>
       </Section>
-      <Section name="Explicitly type generator sequence" filename="projects/<exe-name>/IntrospectiveTests/GeneratorsImpl.tests.cpp" >
+      <Section name="Explicitly typed generator sequence" filename="projects/<exe-name>/IntrospectiveTests/GeneratorsImpl.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/IntrospectiveTests/GeneratorsImpl.tests.cpp" >
           <Original>
             gen.get().size() == 2

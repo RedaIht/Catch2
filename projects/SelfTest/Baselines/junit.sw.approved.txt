@@ -344,7 +344,7 @@ Message.tests.cpp:<line number>
     <testcase classname="<exe-name>.global" name="Generators internals/Single value" time="{duration}"/>
     <testcase classname="<exe-name>.global" name="Generators internals/Preset values" time="{duration}"/>
     <testcase classname="<exe-name>.global" name="Generators internals/Generator combinator" time="{duration}"/>
-    <testcase classname="<exe-name>.global" name="Generators internals/Explicitly type generator sequence" time="{duration}"/>
+    <testcase classname="<exe-name>.global" name="Generators internals/Explicitly typed generator sequence" time="{duration}"/>
     <testcase classname="<exe-name>.global" name="Greater-than inequalities with different epsilons" time="{duration}"/>
     <testcase classname="<exe-name>.global" name="INFO and WARN do not abort tests" time="{duration}"/>
     <testcase classname="<exe-name>.global" name="INFO gets logged on failure" time="{duration}">
