@@ -13,16 +13,15 @@
 namespace Catch {
 
     namespace Generators {
-        class GeneratorBase {
-        protected:
-            size_t m_size = 0;
+        class GeneratorUntypedBase {
+        private:
 
         public:
-            GeneratorBase( size_t size ) : m_size( size ) {}
-            virtual ~GeneratorBase();
-            auto size() const -> size_t { return m_size; }
+            GeneratorUntypedBase() = default;
+            virtual ~GeneratorUntypedBase();
+            virtual bool next() = 0;
         };
-        using GeneratorBasePtr = std::unique_ptr<GeneratorBase>;
+        using GeneratorBasePtr = std::unique_ptr<GeneratorUntypedBase>;
 
     } // namespace Generators
 
@@ -31,7 +30,6 @@ namespace Catch {
         virtual auto hasGenerator() const -> bool = 0;
         virtual auto getGenerator() const -> Generators::GeneratorBasePtr const& = 0;
         virtual void setGenerator( Generators::GeneratorBasePtr&& generator ) = 0;
-        virtual auto getIndex() const -> std::size_t = 0;
     };
 
 } // namespace Catch
