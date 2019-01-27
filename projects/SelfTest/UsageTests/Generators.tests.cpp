@@ -31,11 +31,23 @@ TEST_CASE("3x3x3 ints", "[generators]") {
 
 // You can also create data tuples
 TEST_CASE("tables", "[generators]") {
+    // Note that this will not compile with libstdc++ older than libstdc++6
+    // See https://stackoverflow.com/questions/12436586/tuple-vector-and-initializer-list
+    // for possible workarounds
+    //    auto data = GENERATE(table<char const*, int>({
+    //        {"first", 5},
+    //        {"second", 6},
+    //        {"third", 5},
+    //        {"etc...", 6}
+    //    }));
+
+    // Workaround for the libstdc++ bug mentioned above
+    using tuple_type = std::tuple<char const*, int>;
     auto data = GENERATE(table<char const*, int>({
-        {"first", 5},
-        {"second", 6},
-        {"third", 5},
-        {"etc...", 6}
+        tuple_type{"first", 5},
+        tuple_type{"second", 6},
+        tuple_type{"third", 5},
+        tuple_type{"etc...", 6}
     }));
 
     REQUIRE(strlen(std::get<0>(data)) == std::get<1>(data));
