@@ -3538,6 +3538,75 @@
       </Section>
       <OverallResult success="true"/>
     </TestCase>
+    <TestCase name="Generators -- generic" tags="[generators]" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+      <Section name="Filtering by predicate" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+        <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+          <Original>
+            i % 2 == 0
+          </Original>
+          <Expanded>
+            0 == 0
+          </Expanded>
+        </Expression>
+        <OverallResults successes="1" failures="0" expectedFailures="0"/>
+      </Section>
+      <Section name="Filtering by predicate" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+        <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+          <Original>
+            i % 2 == 0
+          </Original>
+          <Expanded>
+            0 == 0
+          </Expanded>
+        </Expression>
+        <OverallResults successes="1" failures="0" expectedFailures="0"/>
+      </Section>
+      <Section name="Filtering by predicate" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+        <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+          <Original>
+            i % 2 == 0
+          </Original>
+          <Expanded>
+            0 == 0
+          </Expanded>
+        </Expression>
+        <OverallResults successes="1" failures="0" expectedFailures="0"/>
+      </Section>
+      <Section name="Shortening a range" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+        <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+          <Original>
+            i &lt; 4
+          </Original>
+          <Expanded>
+            1 &lt; 4
+          </Expanded>
+        </Expression>
+        <OverallResults successes="1" failures="0" expectedFailures="0"/>
+      </Section>
+      <Section name="Shortening a range" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+        <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+          <Original>
+            i &lt; 4
+          </Original>
+          <Expanded>
+            2 &lt; 4
+          </Expanded>
+        </Expression>
+        <OverallResults successes="1" failures="0" expectedFailures="0"/>
+      </Section>
+      <Section name="Shortening a range" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+        <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
+          <Original>
+            i &lt; 4
+          </Original>
+          <Expanded>
+            3 &lt; 4
+          </Expanded>
+        </Expression>
+        <OverallResults successes="1" failures="0" expectedFailures="0"/>
+      </Section>
+      <OverallResult success="true"/>
+    </TestCase>
     <TestCase name="Generators -- simple" tags="[generators]" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
       <Section name="one" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
@@ -11654,7 +11723,7 @@ loose text artifact
       </Section>
       <OverallResult success="true"/>
     </TestCase>
-    <OverallResults successes="1112" failures="130" expectedFailures="21"/>
+    <OverallResults successes="1118" failures="130" expectedFailures="21"/>
   </Group>
-  <OverallResults successes="1112" failures="129" expectedFailures="21"/>
+  <OverallResults successes="1118" failures="129" expectedFailures="21"/>
 </Catch>

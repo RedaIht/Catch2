@@ -2851,6 +2851,78 @@ Matchers.tests.cpp:<line number>: PASSED:
   REQUIRE_THROWS_AS( WithinULP(1.f, -1), std::domain_error )
 
 -------------------------------------------------------------------------------
+Generators -- generic
+  Filtering by predicate
+-------------------------------------------------------------------------------
+Generators.tests.cpp:<line number>
+...............................................................................
+
+Generators.tests.cpp:<line number>: PASSED:
+  REQUIRE( i % 2 == 0 )
+with expansion:
+  0 == 0
+
+-------------------------------------------------------------------------------
+Generators -- generic
+  Filtering by predicate
+-------------------------------------------------------------------------------
+Generators.tests.cpp:<line number>
+...............................................................................
+
+Generators.tests.cpp:<line number>: PASSED:
+  REQUIRE( i % 2 == 0 )
+with expansion:
+  0 == 0
+
+-------------------------------------------------------------------------------
+Generators -- generic
+  Filtering by predicate
+-------------------------------------------------------------------------------
+Generators.tests.cpp:<line number>
+...............................................................................
+
+Generators.tests.cpp:<line number>: PASSED:
+  REQUIRE( i % 2 == 0 )
+with expansion:
+  0 == 0
+
+-------------------------------------------------------------------------------
+Generators -- generic
+  Shortening a range
+-------------------------------------------------------------------------------
+Generators.tests.cpp:<line number>
+...............................................................................
+
+Generators.tests.cpp:<line number>: PASSED:
+  REQUIRE( i < 4 )
+with expansion:
+  1 < 4
+
+-------------------------------------------------------------------------------
+Generators -- generic
+  Shortening a range
+-------------------------------------------------------------------------------
+Generators.tests.cpp:<line number>
+...............................................................................
+
+Generators.tests.cpp:<line number>: PASSED:
+  REQUIRE( i < 4 )
+with expansion:
+  2 < 4
+
+-------------------------------------------------------------------------------
+Generators -- generic
+  Shortening a range
+-------------------------------------------------------------------------------
+Generators.tests.cpp:<line number>
+...............................................................................
+
+Generators.tests.cpp:<line number>: PASSED:
+  REQUIRE( i < 4 )
+with expansion:
+  3 < 4
+
+-------------------------------------------------------------------------------
 Generators -- simple
   one
 -------------------------------------------------------------------------------
@@ -9726,6 +9798,6 @@ Misc.tests.cpp:<line number>
 Misc.tests.cpp:<line number>: PASSED:
 
 ===============================================================================
-test cases:  244 |  171 passed |  69 failed |  4 failed as expected
-assertions: 1262 | 1112 passed | 129 failed | 21 failed as expected
+test cases:  245 |  172 passed |  69 failed |  4 failed as expected
+assertions: 1268 | 1118 passed | 129 failed | 21 failed as expected
 
