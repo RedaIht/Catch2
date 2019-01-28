@@ -16,8 +16,24 @@
 #include <cassert>
 
 #include <utility>
+#include <exception>
 
 namespace Catch {
+
+class GeneratorException : public std::exception {
+    const char* const m_msg = "";
+
+public:
+    GeneratorException(const char* msg):
+        m_msg(msg)
+    {}
+
+
+    const char* what() const noexcept override {
+        return m_msg;
+    }
+};
+
 namespace Generators {
 
     // !TBD move this into its own location?
@@ -207,7 +223,12 @@ namespace Generators {
             m_predicate(std::forward<P>(pred))
         {
             if (!m_predicate(m_generator.get())) {
-                next();
+                // It might happen that there are no values that pass the
+                // filter. In that case we throw an exception.
+                auto has_initial_value = next();
+                if (!has_initial_value) {
+                    Catch::throw_exception(GeneratorException("No valid value found in filtered generator"));
+                }
             }
         }
 
