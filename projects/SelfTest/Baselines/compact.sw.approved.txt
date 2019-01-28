@@ -408,21 +408,21 @@ Generators.tests.cpp:<line number>: passed: i < 4 for: 3 < 4
 Generators.tests.cpp:<line number>: passed: j < i for: -3 < 1
 Generators.tests.cpp:<line number>: passed: j < i for: -2 < 1
 Generators.tests.cpp:<line number>: passed: j < i for: -1 < 1
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 4 > 1
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 4 > 2
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 4 > 3
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 4 > 1
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 4 > 2
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 4 > 3
 Generators.tests.cpp:<line number>: passed: j < i for: -3 < 2
 Generators.tests.cpp:<line number>: passed: j < i for: -2 < 2
 Generators.tests.cpp:<line number>: passed: j < i for: -1 < 2
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 8 > 1
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 8 > 2
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 8 > 3
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 8 > 1
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 8 > 2
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 8 > 3
 Generators.tests.cpp:<line number>: passed: j < i for: -3 < 3
 Generators.tests.cpp:<line number>: passed: j < i for: -2 < 3
 Generators.tests.cpp:<line number>: passed: j < i for: -1 < 3
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 12 > 1
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 12 > 2
-Generators.tests.cpp:<line number>: passed: 4 * i > str.size() for: 12 > 3
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 12 > 1
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 12 > 2
+Generators.tests.cpp:<line number>: passed: 4u * i > str.size() for: 12 > 3
 GeneratorsImpl.tests.cpp:<line number>: passed: gen.get() == 123 for: 123 == 123
 GeneratorsImpl.tests.cpp:<line number>: passed: !(gen.next()) for: !false
 GeneratorsImpl.tests.cpp:<line number>: passed: gen.get() == 1 for: 1 == 1
@@ -1262,10 +1262,10 @@ Generators.tests.cpp:<line number>: passed: data.str.size() == data.len for: 3 =
 Generators.tests.cpp:<line number>: passed: data.str.size() == data.len for: 3 == 3
 Generators.tests.cpp:<line number>: passed: data.str.size() == data.len for: 5 == 5
 Generators.tests.cpp:<line number>: passed: data.str.size() == data.len for: 4 == 4
-Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == std::get<1>(data) for: 5 == 5
-Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == std::get<1>(data) for: 6 == 6
-Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == std::get<1>(data) for: 5 == 5
-Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == std::get<1>(data) for: 6 == 6
+Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == static_cast<size_t>(std::get<1>(data)) for: 5 == 5
+Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == static_cast<size_t>(std::get<1>(data)) for: 6 == 6
+Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == static_cast<size_t>(std::get<1>(data)) for: 5 == 5
+Generators.tests.cpp:<line number>: passed: strlen(std::get<0>(data)) == static_cast<size_t>(std::get<1>(data)) for: 6 == 6
 Exception.tests.cpp:<line number>: failed: unexpected exception with message: 'Why would you throw a std::string?'
 Misc.tests.cpp:<line number>: passed: result == "\"wide load\"" for: ""wide load"" == ""wide load""
 Misc.tests.cpp:<line number>: passed: result == "\"wide load\"" for: ""wide load"" == ""wide load""

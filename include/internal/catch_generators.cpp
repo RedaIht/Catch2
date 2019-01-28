@@ -16,6 +16,11 @@ namespace Catch {
 
 IGeneratorTracker::~IGeneratorTracker() {}
 
+const char* GeneratorException::what() const noexcept {
+    return m_msg;
+}
+
+
 namespace Generators {
 
     GeneratorUntypedBase::~GeneratorUntypedBase() {}

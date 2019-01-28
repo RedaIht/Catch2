@@ -29,9 +29,7 @@ public:
     {}
 
 
-    const char* what() const noexcept override {
-        return m_msg;
-    }
+    const char* what() const noexcept override;
 };
 
 namespace Generators {

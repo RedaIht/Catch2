@@ -14,7 +14,7 @@ TEST_CASE("Generators -- simple", "[generators]") {
     SECTION("two") {
         // You can also explicitly set type for generators via Catch::Generators::as
         auto str = GENERATE(as<std::string>{}, "a", "bb", "ccc");
-        REQUIRE(4 * i > str.size());
+        REQUIRE(4u * i > str.size());
     }
 }
 
@@ -50,7 +50,7 @@ TEST_CASE("tables", "[generators]") {
         tuple_type{"etc...", 6}
     }));
 
-    REQUIRE(strlen(std::get<0>(data)) == std::get<1>(data));
+    REQUIRE(strlen(std::get<0>(data)) == static_cast<size_t>(std::get<1>(data)));
 }
 
 

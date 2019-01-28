@@ -3644,7 +3644,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             4 > 1
@@ -3655,7 +3655,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             4 > 2
@@ -3666,7 +3666,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             4 > 3
@@ -3710,7 +3710,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             8 > 1
@@ -3721,7 +3721,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             8 > 2
@@ -3732,7 +3732,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             8 > 3
@@ -3776,7 +3776,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             12 > 1
@@ -3787,7 +3787,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             12 > 2
@@ -3798,7 +3798,7 @@
       <Section name="two" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
           <Original>
-            4 * i > str.size()
+            4u * i > str.size()
           </Original>
           <Expanded>
             12 > 3
@@ -11173,7 +11173,7 @@ loose text artifact
     <TestCase name="tables" tags="[generators]" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
       <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Original>
-          strlen(std::get&lt;0>(data)) == std::get&lt;1>(data)
+          strlen(std::get&lt;0>(data)) == static_cast&lt;size_t>(std::get&lt;1>(data))
         </Original>
         <Expanded>
           5 == 5
@@ -11181,7 +11181,7 @@ loose text artifact
       </Expression>
       <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Original>
-          strlen(std::get&lt;0>(data)) == std::get&lt;1>(data)
+          strlen(std::get&lt;0>(data)) == static_cast&lt;size_t>(std::get&lt;1>(data))
         </Original>
         <Expanded>
           6 == 6
@@ -11189,7 +11189,7 @@ loose text artifact
       </Expression>
       <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Original>
-          strlen(std::get&lt;0>(data)) == std::get&lt;1>(data)
+          strlen(std::get&lt;0>(data)) == static_cast&lt;size_t>(std::get&lt;1>(data))
         </Original>
         <Expanded>
           5 == 5
@@ -11197,7 +11197,7 @@ loose text artifact
       </Expression>
       <Expression success="true" type="REQUIRE" filename="projects/<exe-name>/UsageTests/Generators.tests.cpp" >
         <Original>
-          strlen(std::get&lt;0>(data)) == std::get&lt;1>(data)
+          strlen(std::get&lt;0>(data)) == static_cast&lt;size_t>(std::get&lt;1>(data))
         </Original>
         <Expanded>
           6 == 6
