@@ -184,7 +184,9 @@ namespace Generators {
         TakeGenerator(size_t target, GeneratorWrapper<T>&& generator):
             m_generator(std::move(generator)),
             m_target(target)
-        {}
+        {
+            assert(target != 0 && "Empty generators are not allowed");
+        }
         T const& get() const override {
             return m_generator.get();
         }
