@@ -236,6 +236,11 @@ namespace Generators {
             return m_generator.get();
         }
 
+#if defined(_MSC_VER)
+#pragma warning(push)
+#pragma warning(disable:4706) // assignment within conditoinal
+#endif
+
         bool next() override {
             bool success = m_generator.next();
             if (!success) {
@@ -246,10 +251,12 @@ namespace Generators {
         }
     };
 
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
+
     template <typename T, typename Predicate>
     GeneratorWrapper<T> filter(Predicate&& pred, GeneratorWrapper<T>&& generator) {
-        //IGenerator<T>* iptr = new FilterGenerator<T, Predicate>(std::forward<Predicate>(pred), std::move(generator));
-        //return GeneratorWrapper<T>({});
         return GeneratorWrapper<T>(std::unique_ptr<IGenerator<T>>(pf::make_unique<FilterGenerator<T, Predicate>>(std::forward<Predicate>(pred), std::move(generator))));
     }
 
